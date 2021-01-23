@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 
 export const CharacterCard = props => {
-	const { store, actions } = useContext(Context);
+	// const { store, actions } = useContext(Context);
 	return (
 		<div className="card" style={{ width: "18rem" }}>
 			<img className="card-img-top" src="..." alt="Card image cap" />
