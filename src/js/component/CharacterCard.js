@@ -5,7 +5,11 @@ export const CharacterCard = props => {
 	// const { store, actions } = useContext(Context);
 	return (
 		<div className="card" style={{ width: "18rem" }}>
-			<img className="card-img-top" src="..." alt="Card image cap" />
+			<img
+				className="card-img-top"
+				src="https://lumiere-a.akamaihd.net/v1/images/bb-8-main_72775463.jpeg?region=353%2C38%2C498%2C498&width=320"
+				alt="Card image cap"
+			/>
 			<div className="card-body">
 				<h5 className="card-title">{props.character.name}</h5>
 				<p className="card-text">{props.character.height}</p>
