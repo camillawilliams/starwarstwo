@@ -9,9 +9,8 @@ export const Home = () => {
 	return (
 		<div className="container-fluid mt-5">
 			<div>
-				<h1>Characters</h1>
-				<div className="d-flex" />
-				<div>
+				<h3>Characters</h3>
+				<div className="row">
 					{store.characters.map((value, index) => {
 						//map the characters array
 						return <CharacterCard key={index} character={value} />; //character has access to character details now
@@ -20,8 +19,7 @@ export const Home = () => {
 			</div>
 			<div>
 				<h1>Planets</h1>
-				<div className="d-flex" />
-				<div>
+				<div className="row">
 					{store.planets.map((value, index) => {
 						return <PlanetCard key={index} planet={value} />;
 					})}
