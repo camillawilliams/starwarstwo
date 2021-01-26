@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
+import starwarsRobot from "../../img/starwarsRobot.jpg";
 
 export const CharacterCard = props => {
 	// const { store, actions } = useContext(Context);
@@ -7,7 +8,8 @@ export const CharacterCard = props => {
 		<div className="card" style={{ width: "18rem" }}>
 			<img
 				className="card-img-top"
-				src="https://lumiere-a.akamaihd.net/v1/images/bb-8-main_72775463.jpeg?region=353%2C38%2C498%2C498&width=320"
+				src={starwarsRobot}
+				// src="https://lumiere-a.akamaihd.net/v1/images/bb-8-main_72775463.jpeg?region=353%2C38%2C498%2C498&width=320"
 				alt="Card image cap"
 			/>
 			<div className="card-body">
