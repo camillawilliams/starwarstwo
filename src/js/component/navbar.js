@@ -1,19 +1,47 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import starwarsLogo from "../../img/starwarsLogo.png";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar navbar-light ">
+		<nav className="navbar-dark bg-dark mb-3">
 			<Link to="/">
-				<span className="navbar-brand   h1">
-					<img
-						className
-						src="data:image/jpeg;base64,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"
-						style={{ width: 240, height: 160 }}
-					/>
+				<span className="navbar-brand mb-0 h1 text-white">
+					<img className src={starwarsLogo} style={{ width: 240, height: 160 }} />
 				</span>
 			</Link>
-			{/* <DropDown /> */}
+			<div className="ml-auto">
+				<div className="dropdown">
+					<button
+						className="btn btn-secondary dropdown-toggle"
+						type="button"
+						id="dropdownMenuButton"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false">
+						Favorites
+						<span className="badge badge-secondary">{store.favorites.length}</span>
+					</button>
+
+					<div
+						className={store.favorites.length > 0 ? "dropdown-menu show dropdown-menu-right" : "d-none"}
+						aria-labelledby="dropdownMenuLink">
+						<ul className="w-25 pl-0">
+							{store.favorites &&
+								store.favorites.map((item, index) => {
+									return (
+										<li className="dropdown-item" href="#" key={index}>
+											{item}
+											<button onClick={() => actions.deleteFavorites()}>X </button>
+										</li>
+									);
+								})}
+						</ul>
+					</div>
+				</div>
+			</div>
 		</nav>
 	);
 };

@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
+			favorites: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -17,7 +18,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			addFavorites: newItem => {
+				var storeCopy = getStore();
+				var updatedFavorites = storeCopy.favorites.concat(newItem);
+
+				setStore({ favorites: updatedFavorites });
+			},
 			// Use getActions to call a function within a fuction
+			// setFavorite: addItem => {
+			// 	var storeCopy = getStore();
+			// 	var checkItem = storeCopy.favorites.find(() => {
+			// 		return newItem == storeCopy;
+			// 	// we make a copy of storeCopy to manipulate it without the need of adjusting the main getState.
+			// 	var checkItem = storeCopy.favorites.find(value => {
+			// 		// we are searching for any value with similar names
+			// 		return value == newItem;
+			// 	});
+			// 	if (newItem != checkItem) {
+			// 		var setFavorites = storeCopy.favorites.concat();
+			// 	// we use if else statement to correctly display no more than one  of each value on newItem, only allow when item is not defined.
+			// 	if (checkItem == undefined) {
+
+			// 		var newFavorites = storeCopy.favorites.concat(newItem);
+
+			// 		setStore({ favorites: newFavorites });
+			// 	}
+			// 	setStore({ favorites: setFavorites });
+			// },
+			// we create a new function to delete from the favorite list
+			deleteFavorites: deletedItem => {
+				var storeCopy = getStore();
+
+				var newFavorites = storeCopy.favorites.filter((value, index) => {
+					return value != deletedItem;
+				});
+				setStore({ favorites: newFavorites });
+			},
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
