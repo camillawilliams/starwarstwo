@@ -34,7 +34,7 @@ export const Navbar = () => {
 									return (
 										<li className="dropdown-item" href="#" key={index}>
 											{item}
-											<button onClick={() => actions.deleteFavorites()}>X </button>
+											<button onClick={() => actions.deleteFavorites(index)}>X </button>
 										</li>
 									);
 								})}

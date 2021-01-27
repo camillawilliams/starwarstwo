@@ -14,12 +14,14 @@ export const CharacterCard = props => {
 				<p className="card-text">{props.character.height}</p>
 				<p className="card-text">{props.character.hair_color}</p>
 				{/* <a href="#" className="btn btn-primary" /> */}
-				<Link to={"/characterdetails/" + props.character.id} className="btn btn-sm">
+				<Link to={`/characterdetails/${props.index}`}>
+					{" "}
+					{/* className="btn btn-sm"> */}
 					<span href="#" className="btn btn-primary">
 						CLick for more
 					</span>
 				</Link>
-				<button onClick={() => actions.addFavorites(props.character.name)}>Add Favorite</button>
+				<button onClick={() => actions.setFavorite(props.character.name)}>Add Favorite</button>
 				{/* this button runs an onCLick event. Passes and argument which is the name of the character */}
 			</div>
 		</div>
@@ -28,4 +30,7 @@ export const CharacterCard = props => {
 
 CharacterCard.propTypes = {
 	character: PropTypes.object
+};
+CharacterCard.propTypes = {
+	index: PropTypes.number
 };
