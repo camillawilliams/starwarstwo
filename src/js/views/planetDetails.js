@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export const planetDetails = props => {
+export const PlanetDetails = props => {
 	return (
 		<div className="card m-3" style={{ width: "18rem" }}>
 			<img className="card-img-top" src="..." alt="Card image cap" />
@@ -26,7 +26,7 @@ export const planetDetails = props => {
 		</div>
 	);
 };
-planetDetails.propTypes = {
+PlanetDetails.propTypes = {
 	planet: PropTypes.object,
 	name: PropTypes.object
 };

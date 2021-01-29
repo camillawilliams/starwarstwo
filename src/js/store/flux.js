@@ -75,7 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(function(responseAsJson) {
 						setStore({ characters: responseAsJson.results }); //.results means grabbing the value of the propery results
-						console.log(characters);
+						// console.log(characters);
 						//
 					})
 					.catch(function(error) {
@@ -92,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(function(responseAsJson) {
 						setStore({ planets: responseAsJson.results }); //.results means grabbing the value of the propery results
-						console.log(planets);
+						// console.log(planets);
 						//
 					})
 					.catch(function(error) {

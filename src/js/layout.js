@@ -9,8 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { characterDetails } from "./views/characterDetails";
-import { planetDetails } from "./views/planetDetails";
+import { CharacterDetails } from "./views/characterDetails";
+import { PlanetDetails } from "./views/planetDetails";
 
 //create your first component
 const Layout = () => {
@@ -19,7 +19,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column">
+		<div className="main-div d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -30,11 +30,11 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
-						<Route exact path="/characterdetails/:theid" component={characterDetails}>
-							<characterDetails />
+						<Route exact path="/characterdetails/:theid" component={CharacterDetails}>
+							{/* <characterDetails /> */}
 						</Route>
-						<Route exact path="/planetdetails/:theid" component={planetDetails}>
-							<planetDetails />
+						<Route exact path="/planetdetails/:theid" component={PlanetDetails}>
+							{/* <planetDetails /> */}
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

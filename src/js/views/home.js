@@ -13,7 +13,7 @@ export const Home = () => {
 				<div className="row">
 					{store.characters.map((value, index) => {
 						//map the characters array
-						return <CharacterCard key={index} character={value} />; //character has access to character details now
+						return <CharacterCard key={index} character={value} index={index} />; //character has access to character details now
 					})}
 				</div>
 			</div>

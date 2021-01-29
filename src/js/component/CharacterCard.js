@@ -12,7 +12,7 @@ export const CharacterCard = props => {
 			<div className="card-body">
 				<h5 className="card-title">{props.character.name}</h5>
 				<p className="card-text">{props.character.height}</p>
-				<p className="card-text">{props.character.hair_color}</p>
+				<p className="card-text">{props.character.climate}</p>
 				{/* <a href="#" className="btn btn-primary" /> */}
 				<Link to={`/characterdetails/${props.index}`}>
 					{" "}
@@ -29,8 +29,6 @@ export const CharacterCard = props => {
 };
 
 CharacterCard.propTypes = {
-	character: PropTypes.object
-};
-CharacterCard.propTypes = {
+	character: PropTypes.object,
 	index: PropTypes.number
 };
