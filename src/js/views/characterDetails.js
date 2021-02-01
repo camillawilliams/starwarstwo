@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
-import starwarsRobot from "../../img/starwarsRobot.jpg";
+import lukeskywalker from "../../img/lukeskywalker.jpg";
 import { Context } from "../store/appContext";
 
 export const CharacterDetails = props => {
@@ -17,13 +17,14 @@ export const CharacterDetails = props => {
 	);
 	return (
 		char != null && (
-			<div className="container text-blue">
-				<div className="characterImage" src={starwarsRobot} />
-				<div className="main-page">{char.name}</div>
+			<div className="container text-white">
+				<img className="characterImage" src={lukeskywalker} />
+
 				<div className="row">
+					<div className="main-page">{char.name}</div>
 					<div className="col-md-2">{char.gender}</div>
-					<div className="col-md-2">character test 3</div>
-					<div className="col-md-2">character test 4</div>
+					<div className="col-md-2">{char.height}</div>
+					<div className="col-md-2">{char.eye_color}</div>
 				</div>
 			</div>
 		)
