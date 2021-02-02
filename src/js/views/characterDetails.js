@@ -22,9 +22,9 @@ export const CharacterDetails = props => {
 
 				<div className="row">
 					<div className="main-page">{char.name}</div>
-					<div className="col-md-2">{char.gender}</div>
-					<div className="col-md-2">{char.height}</div>
-					<div className="col-md-2">{char.eye_color}</div>
+					<div className="gender col-md-2">{char.gender}</div>
+					<div className="height col-md-2">{char.height}</div>
+					<div className="eye-color col-md-2">{char.eye_color}</div>
 				</div>
 			</div>
 		)
