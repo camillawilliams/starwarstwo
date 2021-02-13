@@ -13,10 +13,9 @@ export const CharacterCard = props => {
 				<h5 className="card-title">{props.character.name}</h5>
 				<p className="card-text">{props.character.height}</p>
 				<p className="card-text">{props.character.climate}</p>
-				{/* <a href="#" className="btn btn-primary" /> */}
+
 				<Link to={`/characterdetails/${props.index}`}>
 					{" "}
-					{/* className="btn btn-sm"> */}
 					<span href="#" className="btn btn-primary">
 						CLick for more
 					</span>
