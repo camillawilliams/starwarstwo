@@ -21,7 +21,7 @@ export const Home = () => {
 				<h1>Planets</h1>
 				<div className="row">
 					{store.planets.map((value, index) => {
-						return <PlanetCard key={index} planet={value} />;
+						return <PlanetCard key={index} planet={value} index={index} />;
 					})}
 				</div>
 			</div>

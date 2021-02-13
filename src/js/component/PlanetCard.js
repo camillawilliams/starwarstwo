@@ -16,6 +16,7 @@ export const PlanetCard = props => {
 				<p className="card-text"> {props.planet.climate}</p>
 				<Link to={`/planetdetails/${props.index}`}>
 					<span href="#" className="btn btn-primary">
+						{" "}
 						CLick for more
 					</span>
 				</Link>
