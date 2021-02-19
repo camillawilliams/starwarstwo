@@ -22,9 +22,9 @@ export const PlanetDetails = props => {
 
 				<div className="row">
 					<div className="main-page">{plan.name}</div>
-					<div className="gender col-md-2">{plan.gender}</div>
-					<div className="height col-md-2">{plan.height}</div>
-					<div className="eye-color col-md-2">{plan.eye_color}</div>
+					<div className="gender col-md-2">{plan.diameter}</div>
+					<div className="height col-md-2">{plan.gravity}</div>
+					<div className="eye-color col-md-2">{plan.climate}</div>
 				</div>
 			</div>
 		)

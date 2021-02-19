@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 
 export const CharacterCard = props => {
 	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="card" style={{ width: "18rem" }}>
 			<img className="card-img-top" src={starwarsRobot} alt="Card image cap" />
