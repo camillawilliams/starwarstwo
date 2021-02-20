@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
-import lukeskywalker from "../../img/lukeskywalker.jpg";
+import tatooine from "../../img/tatooine.jpg";
 import { Context } from "../store/appContext";
 
 export const PlanetDetails = props => {
@@ -18,7 +18,7 @@ export const PlanetDetails = props => {
 	return (
 		plan != null && (
 			<div className="container text-white">
-				<img className="planetImage" src={lukeskywalker} />
+				<img className="planetImage" src={tatooine} />
 
 				<div className="row">
 					<div className="main-page">{plan.name}</div>
